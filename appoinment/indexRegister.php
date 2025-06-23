@@ -44,3 +44,27 @@
                 if(!$result){
                     die("Invalid query:".$conn->error);
                 }
+
+                //read data of each row
+                
+                while($row = $result->fetch_assoc()){
+                    echo "
+                    <tr>
+                        <td>{$row['appointmentId']}</td>
+                        <td>{$row['patientName']}</td>
+                        <td>{$row['age']}</td>
+                        <td>{$row['address']}</td>
+                        <td>{$row['clinicType']}</td>
+                        <td>{$row['appointmentDate']}</td>
+                        <td>
+                            <button class='btn' style='text-align: center; margin: 20px 0;'><a href='editAppointment.php?appointmentId={$row['appointmentId']}'>Edit</a></button>
+                            <button  class='btn' style='text-align: center; margin: 20px 0;'><a  href='deleteAppointment.php?appointmentId={$row['appointmentId']}'>Delete</a></button>
+                        </td>
+                    </tr>
+                    ";
+                    }
+                ?>   
+            </table>      
+        </div>    
+    </body>
+</html>
