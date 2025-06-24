@@ -71,3 +71,66 @@
     </style>
 </head>
 <body>
+
+<h1>All Published Posts</h1>
+
+<!-- Add New Post button -->
+<div class="add-post">
+    <button onclick="location.href='add_post.php'">Add New Post</button>
+    <button onclick="location.href='../dashboard/admin_dashboard.php'">Back Previous Page</button>
+</div>
+
+<table>
+    <tr>
+        <th>Post ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th id="action-cell">Actions</th> <!-- Apply min-width here -->
+    </tr>
+
+    <?php
+    // Connect to the database
+    $conn = new mysqli('localhost', 'root', '', 'diet_planning_&_health_checkup_system');
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Fetch all posts from the database
+    $sql = "SELECT * FROM posts";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        // Output data for each row
+        while($row = $result->fetch_assoc()) {
+            echo "
+            <tr>
+                <td>{$row['id']}</td>
+                <td>{$row['title']}</td>
+                <td id='description-cell'>{$row['description']}</td>
+                <td id='action-cell'> 
+                    <button onclick=\"location.href='post_details.php?id={$row['id']}'\">View</button>
+                    <button onclick=\"location.href='update_post.php?id={$row['id']}'\">Update</button>
+                    <button onclick=\"deletePost({$row['id']})\">Delete</button>
+                </td>
+            </tr>";
+        }
+    } else {
+        echo "<tr><td colspan='4'>No posts available.</td></tr>";
+    }
+
+    $conn->close();
+    ?>
+
+</table>
+
+<script>
+    // Function to delete a post
+    function deletePost(postId) {
+        if (confirm("Are you sure you want to delete this post?")) {
+            window.location.href = `delete_post.php?id=${postId}`;
+        }
+    }
+</script>
+
+</body>
+</html>
