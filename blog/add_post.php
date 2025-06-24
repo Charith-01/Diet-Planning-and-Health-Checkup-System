@@ -14,7 +14,7 @@
             <a href="blog.php">Home</a>
         </nav>
     </header>
-    
+
     <section>
         <form action="upload_post.php" method="POST" enctype="multipart/form-data">
             <label for="title">Title:</label>
