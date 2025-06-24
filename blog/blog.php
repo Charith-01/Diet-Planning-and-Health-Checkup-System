@@ -132,7 +132,7 @@
             }
         }
     </style>
-    </head>
+</head>
 <body>
     <header>
         <h1>Blog Page</h1>
