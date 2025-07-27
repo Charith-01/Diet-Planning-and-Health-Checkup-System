@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
             $errorMessage = "Only JPG, JPEG, PNG & GIF files are allowed.";
         }
     }
-    
+
 
     do{
         if(empty($ClinicName)||empty($StaffInCharge)||empty($Address)){
