@@ -72,3 +72,47 @@ else{
     }while(true);
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Clinic</title>
+        <link rel="stylesheet" href="../CSS/clinic.css">
+    </head>
+    <body>
+        <h2>Update Clinic Information</h2>
+
+        <form method="POST">
+            <input type="hidden" name="clinicId" value="<?php echo $ClinicId; ?>" required>
+            <div class="f2">
+                <label class="f_l2">Clinic Name</label>
+                <div class="textbox2">
+                    <input type="text" class="f_t2" name="clinicName" value="<?php echo $ClinicName; ?>" required>
+                </div>
+            </div>
+
+            <div class="f3">
+                <label class="f_l3">Staff-In-Charge</label>
+                <div class="textbox3">
+                    <input type="text" class="f_t3" name="staffInCharge" value="<?php echo $StaffInCharge; ?>" required>
+                </div>
+            </div>
+
+            <div class="f4">
+                <label class="f_l4">Address</label>
+                <div class="textbox4">
+                    <input type="text" class="f_t4" name="address" value="<?php echo $Address; ?>" required>
+                </div>
+            </div>
+            
+            <div class="f5">
+                <div class="f_l5">
+                    <button type="submit" class="btn">Submit</button>
+                </div>
+                <div class="f_l5">
+                    <a class="btn" href="index.php" role="button">Cancel</a>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
