@@ -72,3 +72,34 @@ $conn->close();
         }  
     </style>
 </head>
+
+<body>
+
+    <h1>Top Clinics</h1>
+
+    <div class="clinic-container">
+        <?php
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo "<div class='clinic1'>";
+                echo "<img src='" . $row['clinicImage'] . "' alt='Clinic Image' />";
+                echo "<h2>" . $row['clinicName'] . "</h2>";
+                echo "<h4>Doctor-In-Charge: " . $row['staffInCharge'] . "</h4>";
+                echo "<h4>Address: " . $row['address'] . "</h4>";
+                echo "</div>";   
+            }
+            
+        } else {
+            echo "<p>No clinics found.</p>";
+        }
+        ?>
+    </div>
+    <div class='register' style='text-align: center; margin: 20px 0;'>
+            <a href='../appoinment/register.php' class='btn'>New Appointment</a>
+    </div>
+</body>
+</html>
+
+<?php
+include_once '../footer.php';
+?>
