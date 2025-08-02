@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0050d5; /* Background Blue */
+}
+.service-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px auto;
+    max-width: 1200px;
+    flex-wrap: wrap; /* Ensure it wraps on smaller screens */
+}
+.service-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Add some margin around each card */
+}
+.service-card .icon {
+    background-color: #16c5ff;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 30px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.service-card h3 {
+    margin-top: 50px;
+    font-size: 22px;
+    color: #333;
+}
+.service-card p {
+    color: black;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.service-card .btn {
+    background-color: #0050d5;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+.service-card .btn:hover {
+    background-color: #16c5ff;
+}
+.service-card:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    transition: transform 0.5s ease; /* Add a smooth hover effect */
+}
+
