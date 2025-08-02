@@ -1,0 +1,59 @@
+
+h1 {
+    text-align: center;
+    color: #2c6fbb;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.constainer{
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+.healthicon {
+    display:block;
+    margin: 0 auto;
+    width: 60px;
+    length: auto;
+}
+
+.question {
+margin-bottom: 10px;
+}
+.question1 {
+    
+    margin-bottom: 6px;
+    margin-right: 12px;
+    font-size:20px;
+}
+.topic1 {
+    margin: 10px;
+    padding-top: 17px;
+    font-size:18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+.q1{
+    padding-right: 2px;
+}
+.buttons {
+text-align: center;
+}
+.buttons input {
+margin: 5px;
+padding: 5px 10px;
+border: none;
+color: white;
+cursor: pointer;
+border-radius: 5px;
+}
+.buttons input[type="submit"] {
+background-color: blue;
+}
+.buttons input[type="reset"] {
+background-color:red;
+}
