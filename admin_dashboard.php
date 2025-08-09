@@ -26,6 +26,7 @@
             <li><a href="../profile/logout.php">Logout</a></li>
         </ul>
     </div>
+
     <!-- Main Content -->
     <div class="main-content">
         <!-- Top Navigation -->
