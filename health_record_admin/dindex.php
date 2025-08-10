@@ -35,3 +35,23 @@
             border-radius: 5px;
         }
     </style>
+
+    </head>
+
+    <body>
+    <h1>Delete Health Checkup Record</h1>
+        <div class="constainer">
+            <form method="post" action="delete.php">
+            <div class="question">
+                <label for="username"> Enter  user name  :</label>
+                <input type="text"  name="uname" >
+            </div>
+
+            <div class="buttons">
+            <input type="submit" value="Delete Data">
+            </div>
+        </div>
+
+        </form>
+    </body>
+</html>
