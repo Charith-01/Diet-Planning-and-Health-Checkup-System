@@ -1,7 +1,3 @@
-Share
-
-CC
-You said:
 <?php
 session_start(); // Start the session
 require 'db.php';
